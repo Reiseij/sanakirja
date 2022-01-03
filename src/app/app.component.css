@@ -1,0 +1,20 @@
+.nimi {
+  color: white;
+  text-align: center;
+  margin: 0px;
+  position: absolute;
+  left: 20px;
+}
+#navlinkit {
+  color: white;
+}
+#kirjaudu-ulos {
+  position: absolute;
+  right: 20px;
+}
+#nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999;
+}

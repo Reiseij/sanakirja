@@ -1,0 +1,50 @@
+<body>
+  <div class="col-md-6 mt-5 mx-auto">
+    <h1 class="otsikko" for="table">Kaikki käyttäjät</h1>
+    <table class="table">
+      <thead>
+        <th>Käyttäjänimi</th>
+        <th>Salasana</th>
+        <th>Poista käyttäjä</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userService.users">
+          <td>{{ user.username }}</td>
+          <td>{{ user.password }}</td>
+          <td>
+            <button
+              (click)="deleteUser(user._id)"
+              class="btn btn-sm btn-danger"
+            >
+              Poista
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-md-6 mt-5 mx-auto">
+    <h1 class="otsikko" for="table">Hallitse sanakirjaa</h1>
+    <table class="table">
+      <thead>
+        <th>Suomeksi</th>
+        <th>Englanniksi</th>
+        <th>Poista sana</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sana of sanaService.sanat">
+          <td>{{ sana.suomi }}</td>
+          <td>{{ sana.englanti }}</td>
+          <td>
+            <button
+              (click)="deleteSana(sana._id)"
+              class="btn btn-sm btn-danger"
+            >
+              Poista
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
